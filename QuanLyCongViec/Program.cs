@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Quanlythoigian
+namespace QuanLyCongViec
 {
     static class Program
     {
@@ -16,9 +16,7 @@ namespace Quanlythoigian
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Application.Run(new FrmKhoiTao());
-            //_str_form.FrmQuanLyThoiGian.ShowDialog();
+            Application.Run(new FrmMain());
         }
     }
 }

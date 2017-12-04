@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Quanlythoigian.Properties
+namespace QuanLyCongViec.Properties
 {
 
 
