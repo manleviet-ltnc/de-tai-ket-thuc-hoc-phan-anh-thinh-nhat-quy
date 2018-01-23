@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCuoi = new System.Windows.Forms.Button();
+            this.btnDau = new System.Windows.Forms.Button();
+            this.btnLen = new System.Windows.Forms.Button();
+            this.btnXuong = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.chkChuaHoanThanh = new System.Windows.Forms.RadioButton();
@@ -45,10 +50,6 @@
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCongViec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXuong = new System.Windows.Forms.Button();
-            this.btnLen = new System.Windows.Forms.Button();
-            this.btnDau = new System.Windows.Forms.Button();
-            this.btnCuoi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,6 +77,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1055, 554);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCuoi
+            // 
+            this.btnCuoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCuoi.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCuoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCuoi.ForeColor = System.Drawing.Color.Black;
+            this.btnCuoi.Location = new System.Drawing.Point(958, 353);
+            this.btnCuoi.Name = "btnCuoi";
+            this.btnCuoi.Size = new System.Drawing.Size(87, 39);
+            this.btnCuoi.TabIndex = 19;
+            this.btnCuoi.Text = "Cuối";
+            this.btnCuoi.UseVisualStyleBackColor = false;
+            this.btnCuoi.Click += new System.EventHandler(this.btnCuoi_Click);
+            // 
+            // btnDau
+            // 
+            this.btnDau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDau.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDau.ForeColor = System.Drawing.Color.Black;
+            this.btnDau.Location = new System.Drawing.Point(958, 297);
+            this.btnDau.Name = "btnDau";
+            this.btnDau.Size = new System.Drawing.Size(87, 39);
+            this.btnDau.TabIndex = 18;
+            this.btnDau.Text = "Đầu";
+            this.btnDau.UseVisualStyleBackColor = false;
+            this.btnDau.Click += new System.EventHandler(this.btnDau_Click);
+            // 
+            // btnLen
+            // 
+            this.btnLen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLen.ForeColor = System.Drawing.Color.Black;
+            this.btnLen.Location = new System.Drawing.Point(858, 297);
+            this.btnLen.Name = "btnLen";
+            this.btnLen.Size = new System.Drawing.Size(84, 39);
+            this.btnLen.TabIndex = 17;
+            this.btnLen.Text = "Lên";
+            this.btnLen.UseVisualStyleBackColor = false;
+            this.btnLen.Click += new System.EventHandler(this.btnLen_Click);
+            // 
+            // btnXuong
+            // 
+            this.btnXuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXuong.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnXuong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXuong.ForeColor = System.Drawing.Color.Black;
+            this.btnXuong.Location = new System.Drawing.Point(858, 353);
+            this.btnXuong.Name = "btnXuong";
+            this.btnXuong.Size = new System.Drawing.Size(87, 39);
+            this.btnXuong.TabIndex = 16;
+            this.btnXuong.Text = "Xuống";
+            this.btnXuong.UseVisualStyleBackColor = false;
+            this.btnXuong.Click += new System.EventHandler(this.btnXuong_Click);
             // 
             // groupBox2
             // 
@@ -223,8 +280,8 @@
             this.dgvCongViec.ReadOnly = true;
             this.dgvCongViec.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCongViec.RowHeadersWidth = 25;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCongViec.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvCongViec.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCongViec.RowTemplate.Height = 30;
             this.dgvCongViec.RowTemplate.ReadOnly = true;
             this.dgvCongViec.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -237,7 +294,6 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Visible = false;
             // 
             // STT
             // 
@@ -262,62 +318,6 @@
             this.TrangThai.Name = "TrangThai";
             this.TrangThai.ReadOnly = true;
             // 
-            // btnXuong
-            // 
-            this.btnXuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXuong.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnXuong.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnXuong.ForeColor = System.Drawing.Color.Black;
-            this.btnXuong.Location = new System.Drawing.Point(858, 297);
-            this.btnXuong.Name = "btnXuong";
-            this.btnXuong.Size = new System.Drawing.Size(87, 39);
-            this.btnXuong.TabIndex = 16;
-            this.btnXuong.Text = "Xuống";
-            this.btnXuong.UseVisualStyleBackColor = false;
-            this.btnXuong.Click += new System.EventHandler(this.btnXuong_Click);
-            // 
-            // btnLen
-            // 
-            this.btnLen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLen.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLen.ForeColor = System.Drawing.Color.Black;
-            this.btnLen.Location = new System.Drawing.Point(861, 353);
-            this.btnLen.Name = "btnLen";
-            this.btnLen.Size = new System.Drawing.Size(84, 39);
-            this.btnLen.TabIndex = 17;
-            this.btnLen.Text = "Lên";
-            this.btnLen.UseVisualStyleBackColor = false;
-            this.btnLen.Click += new System.EventHandler(this.btnLen_Click);
-            // 
-            // btnDau
-            // 
-            this.btnDau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDau.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDau.ForeColor = System.Drawing.Color.Black;
-            this.btnDau.Location = new System.Drawing.Point(958, 353);
-            this.btnDau.Name = "btnDau";
-            this.btnDau.Size = new System.Drawing.Size(87, 39);
-            this.btnDau.TabIndex = 18;
-            this.btnDau.Text = "Đầu";
-            this.btnDau.UseVisualStyleBackColor = false;
-            this.btnDau.Click += new System.EventHandler(this.btnDau_Click);
-            // 
-            // btnCuoi
-            // 
-            this.btnCuoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCuoi.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCuoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCuoi.ForeColor = System.Drawing.Color.Black;
-            this.btnCuoi.Location = new System.Drawing.Point(958, 297);
-            this.btnCuoi.Name = "btnCuoi";
-            this.btnCuoi.Size = new System.Drawing.Size(87, 39);
-            this.btnCuoi.TabIndex = 19;
-            this.btnCuoi.Text = "Cuối";
-            this.btnCuoi.UseVisualStyleBackColor = false;
-            this.btnCuoi.Click += new System.EventHandler(this.btnCuoi_Click);
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +325,7 @@
             this.ClientSize = new System.Drawing.Size(1055, 554);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách công việc";
@@ -353,14 +354,14 @@
         private System.Windows.Forms.RadioButton chkChuaHoanThanh;
         private System.Windows.Forms.RadioButton chkHoanThanh;
         private System.Windows.Forms.RadioButton chkTatCa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenCongViec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
         private System.Windows.Forms.Button btnLen;
         private System.Windows.Forms.Button btnXuong;
         private System.Windows.Forms.Button btnCuoi;
         private System.Windows.Forms.Button btnDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenCongViec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }
 
