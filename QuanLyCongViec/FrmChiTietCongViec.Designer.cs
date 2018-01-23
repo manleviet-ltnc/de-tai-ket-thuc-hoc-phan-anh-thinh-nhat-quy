@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTenCongViec = new System.Windows.Forms.TextBox();
-            this.dateBatDau = new System.Windows.Forms.DateTimePicker();
-            this.dateKetThuc = new System.Windows.Forms.DateTimePicker();
-            this.cbxTrangThai = new System.Windows.Forms.ComboBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.cbxTrangThai = new System.Windows.Forms.ComboBox();
+            this.dateKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.dateBatDau = new System.Windows.Forms.DateTimePicker();
+            this.txtTenCongViec = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,66 +63,31 @@
             this.panel1.Size = new System.Drawing.Size(587, 296);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnExit
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên công việc : ";
+            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.ForeColor = System.Drawing.Color.Black;
+            this.btnExit.Location = new System.Drawing.Point(429, 244);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(123, 39);
+            this.btnExit.TabIndex = 13;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label2
+            // btnSave
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 86);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Bắt đầu :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 140);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Kết thúc :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 194);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Trạng thái :";
-            // 
-            // txtTenCongViec
-            // 
-            this.txtTenCongViec.Location = new System.Drawing.Point(149, 29);
-            this.txtTenCongViec.Name = "txtTenCongViec";
-            this.txtTenCongViec.Size = new System.Drawing.Size(403, 24);
-            this.txtTenCongViec.TabIndex = 4;
-            // 
-            // dateBatDau
-            // 
-            this.dateBatDau.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateBatDau.Location = new System.Drawing.Point(149, 80);
-            this.dateBatDau.Name = "dateBatDau";
-            this.dateBatDau.Size = new System.Drawing.Size(144, 24);
-            this.dateBatDau.TabIndex = 5;
-            // 
-            // dateKetThuc
-            // 
-            this.dateKetThuc.CustomFormat = "dd/MM/yyyy HH:mm";
-            this.dateKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateKetThuc.Location = new System.Drawing.Point(149, 134);
-            this.dateKetThuc.Name = "dateKetThuc";
-            this.dateKetThuc.Size = new System.Drawing.Size(144, 24);
-            this.dateKetThuc.TabIndex = 6;
+            this.btnSave.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(300, 244);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(123, 39);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cbxTrangThai
             // 
@@ -138,31 +103,66 @@
             this.cbxTrangThai.Size = new System.Drawing.Size(403, 25);
             this.cbxTrangThai.TabIndex = 7;
             // 
-            // btnSave
+            // dateKetThuc
             // 
-            this.btnSave.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(300, 244);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 39);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.dateKetThuc.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dateKetThuc.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateKetThuc.Location = new System.Drawing.Point(149, 134);
+            this.dateKetThuc.Name = "dateKetThuc";
+            this.dateKetThuc.Size = new System.Drawing.Size(144, 24);
+            this.dateKetThuc.TabIndex = 6;
             // 
-            // btnExit
+            // dateBatDau
             // 
-            this.btnExit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.Location = new System.Drawing.Point(429, 244);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(123, 39);
-            this.btnExit.TabIndex = 13;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.dateBatDau.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dateBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBatDau.Location = new System.Drawing.Point(149, 80);
+            this.dateBatDau.Name = "dateBatDau";
+            this.dateBatDau.Size = new System.Drawing.Size(144, 24);
+            this.dateBatDau.TabIndex = 5;
+            // 
+            // txtTenCongViec
+            // 
+            this.txtTenCongViec.Location = new System.Drawing.Point(149, 29);
+            this.txtTenCongViec.Name = "txtTenCongViec";
+            this.txtTenCongViec.Size = new System.Drawing.Size(403, 24);
+            this.txtTenCongViec.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(26, 194);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Trạng thái :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 140);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Kết thúc :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Bắt đầu :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên công việc : ";
             // 
             // FrmChiTietCongViec
             // 
@@ -174,7 +174,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmChiTietCongViec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detail";
+            this.Text = "Chi tiết công việc";
             this.Load += new System.EventHandler(this.FrmChiTietCongViec_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -13,6 +13,8 @@ namespace QuanLyCongViec
 {
     public partial class FrmChiTietCongViec : Form
     {
+        // khai báo các biến toàn cục
+
         private CongViec cv = new CongViec();
         public FrmChiTietCongViec(CongViec a)
         {
@@ -23,6 +25,7 @@ namespace QuanLyCongViec
 
         private bool Check()
         {
+            //kiểm tra tên công việc có bị trống hay không
             if (txtTenCongViec.Text == "")
             {
                 MessageBox.Show("Tên công việc không được để trống",
@@ -31,7 +34,7 @@ namespace QuanLyCongViec
                                 MessageBoxIcon.Error);
                 return false;
             }
-
+            //kiểm tra thời gian kết thúc phải lớn hơn thới gian bắt đầu
             if (dateKetThuc.Value< dateBatDau.Value)
             {
                 MessageBox.Show("Thời gian kết thúc phải lớn hơn thời gian bắt đầu",
@@ -73,6 +76,7 @@ namespace QuanLyCongViec
         #endregion
 
         private void FrmChiTietCongViec_Load(object sender, EventArgs e)
+            //tạo đối tượng kết nối
         {
             if (cv.ID == 0)
             {
