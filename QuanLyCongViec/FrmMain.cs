@@ -13,7 +13,7 @@ namespace QuanLyCongViec
 {
     public partial class FrmMain : Form
     {
-        
+
         public FrmMain()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace QuanLyCongViec
         {
             try
             {
-                int id = (int) dgvCongViec.SelectedRows[0].Cells["ID"].Value;
+                int id = (int)dgvCongViec.SelectedRows[0].Cells["ID"].Value;
                 CongViec ans = ModelContext.CongViecs.Where(p => p.ID == id).FirstOrDefault();
                 return ans;
             }
@@ -51,7 +51,7 @@ namespace QuanLyCongViec
             LoadDgv();
         }
 
-        private void btnHienThi_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             CongViec a = getCongViecWithID();
 
@@ -92,8 +92,30 @@ namespace QuanLyCongViec
                             MessageBoxIcon.Information);
             LoadDgv();
         }
-
-        private void btnDong_Click(object sender, EventArgs e)
+        private void btnXuong_Click(object sender, EventArgs e)
+        {
+            hang++;
+            if (hang < dgvCongViec.Rows.Count) dgvCongViec.Rows[hang].Selected = true;
+            else hang = dgvCongViec.Rows.Count - 1;
+           
+        }
+        private void btnLen_Click(object sender, EventArgs e)
+        {
+            hang--;
+            if (hang >= 0) dgvCongViec.Rows[hang].Selected = true;
+            else hang = 0;
+        }
+        private void btnDau_Click(object sender, EventArgs e)
+        {
+            hang = 0;
+            dgvCongViec.Rows[hang].Selected = true;
+        }
+        private void btnCuoi_Click(object sender, EventArgs e)
+        {
+            hang = dgvCongViec.Rows.Count - 1;
+            dgvCongViec.Rows[hang].Selected = true;
+        }
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -123,15 +145,18 @@ namespace QuanLyCongViec
             }
             catch { }
         }
+        int hang = -1;
         private void FrmMain_Load(object sender, EventArgs e)
         {
             LoadDgv();
+            if (dgvCongViec.Rows.Count > 0) hang = 0;
         }
 
         private void UpdateDataGridView(object sender, EventArgs e)
         {
             LoadDgv();
         }
+
         #endregion
     }
 }

@@ -12,7 +12,10 @@ namespace QuanLyCongViec.Model
                new List<CongViec>()
                    {
                         new CongViec() { ID = 1, Ten = "Học C++", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 1 },
-                        new CongViec() { ID = 2, Ten = "Học C#", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 0 }
+                        new CongViec() { ID = 2, Ten = "Học C#", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 0 },
+                        new CongViec() { ID = 3, Ten = "Thi Lập Trình Nâng Cao", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 0 },
+                        new CongViec() { ID = 4, Ten = "Về quê", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 0 },
+                        new CongViec() { ID = 4, Ten = "Thi Mạng Và Truyền Thông", BatDau = DateTime.Now, KetThuc = DateTime.Now, TrangThai = 1 }
                    };
 
         public static void ThemCongViec(CongViec cv)
